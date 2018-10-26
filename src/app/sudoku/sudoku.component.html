@@ -1,0 +1,10 @@
+<div>
+  <table>
+    <tr *ngFor="let row of matrix.cells">
+      <td *ngFor="let cell of row" (mouseenter)="matrix.select(cell)" (mouseleave)="matrix.unselect(cell)">
+        <cell [cell]="cell"></cell>
+      </td>
+    </tr>
+  </table>
+</div>
+<pre>{{matrix | json}}</pre>

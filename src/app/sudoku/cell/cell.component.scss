@@ -1,0 +1,43 @@
+.cell {
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  font-size: 2em;
+  .value {
+    //position: absolute;
+    width: 100%;
+    font-weight: lighter;
+  }
+  &.hard .value {
+    font-weight: normal;
+  }
+  .available {
+    text-align: center;
+    width: 100%;
+    //position: absolute;
+    word-wrap: break-word;
+    font-size: 30%;
+  }
+  border: 2px transparent solid;
+  &.bl {
+    border-left: 2px lightgray solid;
+  }
+  &.br {
+    border-right: 2px lightgray solid;
+  }
+  &.bt {
+    border-top: 2px lightgray solid;
+  }
+  &.bb {
+    border-bottom: 2px lightgray solid;
+  }
+  &.focus {
+    border: 2px green solid;
+  }
+  &.light {
+    background: rgba(180, 255, 180, 0.5);
+  }
+  &.error {
+    background: rgba(255, 50, 50, 0.5);
+  }
+}

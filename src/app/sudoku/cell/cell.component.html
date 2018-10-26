@@ -1,0 +1,30 @@
+<div class="cell" [ngClass]="{
+  focus: cell.focus,
+  light: cell.light,
+  error: cell.error,
+  hard: cell.hard,
+  bl: cell.borders.l,
+  br: cell.borders.r,
+  bt: cell.borders.t,
+  bb: cell.borders.b
+}">
+  <table class="available" [hidden]="cell.value!==null">
+    <tr height="13px">
+      <td><cell-span [cell]="cell" val="1"></cell-span></td>
+      <td><cell-span [cell]="cell" val="2"></cell-span></td>
+      <td><cell-span [cell]="cell" val="3"></cell-span></td>
+    </tr>
+    <tr height="13px">
+      <td><cell-span [cell]="cell" val="4"></cell-span></td>
+      <td><cell-span [cell]="cell" val="5"></cell-span></td>
+      <td><cell-span [cell]="cell" val="6"></cell-span></td>
+    </tr>
+    <tr height="13px">
+      <td><cell-span [cell]="cell" val="7"></cell-span></td>
+      <td><cell-span [cell]="cell" val="8"></cell-span></td>
+      <td><cell-span [cell]="cell" val="9"></cell-span></td>
+    </tr>
+    <!--<span *ngFor="let v of cell.available">{{v}}</span>-->
+  </table>
+  <div class="value" [hidden]="!cell.value">{{cell.value}}</div>
+</div>
