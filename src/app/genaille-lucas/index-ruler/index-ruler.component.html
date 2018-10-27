@@ -1,0 +1,10 @@
+<div class="header">INDEX</div>
+<div class="section" *ngFor="let section of sections; let index = index">
+  <div class="subsection">
+    <div class="index" *ngIf="index">{{index}}</div>
+    <div class="num">
+      <div *ngFor="let num of section.numbers">{{num}}</div>
+    </div>
+  </div>
+</div>
+

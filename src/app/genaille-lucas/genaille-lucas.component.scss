@@ -1,0 +1,62 @@
+@import "./colors.scss";
+
+section {
+  display: flex;
+  align-content: flex-start;
+  color: $primary;
+
+  font-size: 15px;
+  line-height: 1em;
+}
+
+.triangles {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 0em solid transparent;
+  border-right: 5em solid lightgrey;
+  border-bottom: 0em solid transparent;
+
+  -webkit-transform-origin: 100% 0%;
+  -ms-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+
+  transition: 0.3s;
+}
+
+.t1 {
+  border-top-width: 4.5em;
+  border-bottom-width: 2.5em;
+}
+
+.t2 {
+  border-top-width: 0.5em;
+  border-bottom-width: 1.5em;
+
+  transform: skewY(22deg);
+}
+
+.t3 {
+  border-top-width: 4.5em;
+  border-bottom-width: 2.5em;
+}
+
+.triangle-left:hover,
+.active {
+  border-right-color: blue;
+}
+
+.num div {
+  transition: 0.3s;
+  line-height: calc(1em - 4px);
+  border: 2px solid $primary;
+}
+
+.num div:hover {
+  border-color: blue;
+}

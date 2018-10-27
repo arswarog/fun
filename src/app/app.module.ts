@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   {path: 'genaille-lucas', loadChildren: './genaille-lucas/genaille-lucas.module#GenailleLucasModule'},
   {path: 'sudoku', loadChildren: './sudoku/sudoku.module#SudokuModule'},
-  {path: '**', redirectTo: ''},
+  {path: '**', redirectTo: '/genaille-lucas'},
 ];
 
 @NgModule({
