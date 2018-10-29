@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fun-applets": {
+    "fun": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fun-applets",
+            "baseHref": "/fun/",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -54,18 +55,20 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fun-applets:build"
+            "browserTarget": "fun:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "fun-applets:build:production"
+              "browserTarget": "fun:build:production",
+              "baseHref": "/fun/",
+              "baseUrl": "/fun/"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fun-applets:build"
+            "browserTarget": "fun:build"
           }
         },
         "test": {
@@ -99,7 +102,7 @@
         }
       }
     },
-    "fun-applets-e2e": {
+    "fun-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -107,11 +110,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "fun-applets:serve"
+            "devServerTarget": "fun:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "fun-applets:serve:production"
+              "devServerTarget": "fun:serve:production"
             }
           }
         },
@@ -127,5 +130,5 @@
       }
     }
   },
-  "defaultProject": "fun-applets"
+  "defaultProject": "fun"
 }

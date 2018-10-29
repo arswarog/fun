@@ -48,7 +48,8 @@
           //line-height: calc(1em - 4px);
           //border: 2px solid #f0f0f0;
 
-          &:hover {
+          &:hover,
+          &.active {
             background-color: $primary;
             color: $xcolor;
           }

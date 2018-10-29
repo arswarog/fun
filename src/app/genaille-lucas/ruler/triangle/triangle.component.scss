@@ -14,7 +14,8 @@
 
   transition: 0.3s;
 
-  &:hover {
+  &:hover,
+  &.active {
     border-right-color: $primary;
   }
 }

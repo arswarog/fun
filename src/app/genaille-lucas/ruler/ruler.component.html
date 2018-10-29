@@ -1,11 +1,11 @@
-<div class="header">{{index}}</div>
+<div class="header">{{digit}}</div>
 <div class="section" *ngFor="let section of sections; let index = index">
   <div class="subsection" *ngFor="let sub of section">
     <div class="relation">
-      <app-triangle [height]="sub.count" [target]="sub.target"></app-triangle>
+      <app-triangle [height]="sub.count" [target]="sub.target" [active]="sub.active"></app-triangle>
     </div>
     <div class="num">
-      <div *ngFor="let num of sub.numbers">{{num}}</div>
+      <div *ngFor="let num of sub.numbers" [ngClass]="{active: sub.active && numInIndex === num}">{{num}}</div>
     </div>
   </div>
 </div>
